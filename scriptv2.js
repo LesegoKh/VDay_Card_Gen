@@ -1,3 +1,6 @@
+const url = window.location.href;
+window.open(`https://wa.me/?text=${encodeURIComponent(url)}`);
+
 document.getElementById("envelope").addEventListener("click", function() {
     toggleEnvelope();  
     updateLetter();    
