@@ -23,10 +23,9 @@ function shareOnWhatsApp() {
     console.log("Sharing on WhatsApp:", name, message);
 
     
-    const whatsappMessage = `To: ${name}%0A${message}`;
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://api.whatsapp.com/send?text=${encodedMessage}`;
-
+      const whatsappURL = `https://api.whatsapp.com/send?text=${encodedMessage}`;
+const whatsappMessage = `To: ${name}\n${message}`;
+const encodedMessage = encodeURIComponent(whatsappMessage);
     
     window.open(whatsappURL, "_blank");
 }
